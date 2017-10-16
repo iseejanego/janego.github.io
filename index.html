@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel='stylesheet' type='text/css' href='style.css'>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+<title>Monk's Cafe</title>
+</head>
+<body>
+
+<header>
+<h1>Monk's Cafe</h1>
+<h4>"The Coffee Shop"</h4>
+<img src='images/toms-restaurant.jpg'>
+</header>
+
+<div id='reservations'>
+<h1 class='headline'>Reservations</h1>
+
+<div class='reservation-div'>
+	<form id='reservation-form'>
+		<h2>Make a Reservation</h2>
+    <div class='row'>
+		<input id='name' type='text' placeholder='Name'>
+	</div>
+	<div class='row'>
+		<input id='day' type='text' placeholder='Day'>
+	</div>
+		<button type='submit'>CONFIRM RESERVATION</button>
+		<p id='reservation-confirmation'></p>
+	</form>
+</div>
+
+<div class='reservation-div'>
+	<h2>Existing Reservations</h2>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Day</th>
+		</thead>
+
+		<script id='entry-template' type='text/x-handlebars-template'>
+		<tr>
+			<td class='name'>{{name}}</td>
+			<td class='day'>{{day}}</td>
+		</tr>
+		</script>
+	</table>
+</div>
+</div>
+
+
+<div id='come-dine'>
+	<h1 class='headline'>Come Dine with Us</h1>
+	<div id='map'></div>
+</div>
+
+<div id='reviews'>
+	<h1 class='headline'>Customer Reviews</h1>
+	
+	<img class='review-div' src='images/jerry.jpg'>
+	
+	<div class='review-div'>
+		<p id='jerry-quote'>"Big lettuce, big carrots, tomatoes like volleyballs."
+		<br>- Jerry Seinfeld, on The BIG Salad
+		</p>
+	</div>
+</div>
+
+<script src='js/main.js'></script>
+
+<script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCojvsqZsMXs5PXxZRuupL7YoQ3EA5N7lI&callback=initMap'></script>
+
+</body>
+</html>
